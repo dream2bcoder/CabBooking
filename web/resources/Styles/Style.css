@@ -1,0 +1,847 @@
+/*=================================================
+START OF COMOMON CSS
+===================================================*/
+
+html,body{
+    font-family:roboto;
+    color: #4e5359;
+
+}
+a{
+    text-decoration: none;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.cl29586C{
+    background:#567583;
+    color:white;
+}
+.clD2A456{
+    background:#D2A456;
+    color:white;
+}
+.fl-right{
+    float:right;
+}
+.fl-left{
+    float:left;
+}
+.pad_rt{
+    padding-right:50px;
+}
+.pad_lt{
+    padding-left:50px;
+}
+.mdl-layout-title{
+    font-weight:500;
+    font-size:1.6em;
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+    /* This background is dark, so we set text to white. Use 87% black instead if
+       your background is light. */
+    color: white;
+}
+.color-gray{
+    color:gray;
+}
+.mdl-layout__header{
+    background:white;
+    box-shadow:0 0 8px 0 rgba(0,0,0,0.3);
+    color:#777;
+}
+.mdl-layout__header-row .mdl-navigation__link,.mdl-layout__drawer-button{
+    color:#777;
+    text-transform: uppercase;
+    font-size:1rem;
+    font-weight:400;
+    opacity:1;
+}
+
+.mdl-layout__drawer-button{
+    outline:none;
+}
+.mdl-button--colored{
+    background: #448aff !important;
+    color:white !important;
+}
+
+.welcome-banner{
+    /*background:#f8f8f8;*/
+    max-width:100%;
+
+    /*min-height:500px;*/
+    /*max-height:500px;*/
+    margin:0% auto;
+    display:flex;
+    position:relative;
+    align-items: center;
+    background:url('../Assets/Images/494.jpg') no-repeat ;
+    background-size: cover;
+}
+.welcome-banner>div{
+    padding:15% 0;
+}
+.welcome-banner>div > h3{
+    font-size:2.75rem;
+    font-weight:300;
+    text-align:center;
+}
+
+.banner-sub-heading{
+    text-align: center;
+    font-weight:400;
+    color:#706d6d;
+    font-size:1.5rem;
+}
+
+.read-more-btn{
+    position:absolute;
+    left:50%;
+    bottom:0;
+    margin-left:-28px;
+    margin-bottom:-28px;
+
+}
+.components-wrapper{
+    padding:2.5rem ;
+    background:#fafafa;
+}
+.section{
+    max-width:40%;
+    padding:2% 0;
+    margin:5%  auto;
+}
+.section img{
+    width:100%;
+}
+.section-component-heading{
+    font-weight:300;
+    font-size:2.75rem;
+    line-height:1.5;
+}
+.site-subheading{
+    font-size:1rem;
+    color:#888;
+    font-weight:500;
+    text-transform: uppercase;
+}
+.section-para{
+    font-size:1.3rem;
+    width:70%;
+    font-weight:300;
+
+}
+.grid-2{
+    padding:0;
+    height:700px;
+    width:100%;
+    max-height:700px;
+    background:url('../Assets/Images/highway-car-trans.gif');
+    background-size:cover;
+    /*opacity:0.4;*/
+    display:flex;
+    align-items:center;
+}
+.travel-section>h2{
+    color:white;
+}
+.grid-3{
+    background:#ececec;
+}
+
+.grid-3  .section-para{
+    text-align: center;
+    width:100%;
+}
+.mdl-textfield{
+    width:100%;
+}
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label, .mdl-textfield--floating-label.is-dirty .mdl-textfield__label, .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label{
+    color:#448aff;
+}
+.mdl-textfield__label:after{
+    background:#448aff;
+}
+
+.modal-title{
+    font-weight:400;
+    font-size:1.75rem;
+    margin:0;
+}
+
+.error-msg{
+    color:#BD4548;
+    display:none;
+    margin-top:-10px;
+    position:absolute;
+}
+
+
+.md-select {
+    /*Demo css do not add to your project*/
+    position: absolute;
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*-webkit-transform: translate(-50%, -50%);*/
+    /*transform: translate(-50%, -50%);*/
+    /*--*/
+    display: block;
+    margin: 10px 0 8px 0;
+    padding-bottom: 2px;
+    /*  position: relative;*/
+    min-width: 180px;
+}
+.md-select *, .md-select :after, .md-select :before {
+    box-sizing: border-box;
+}
+.md-select [type=button] {
+    background: #fff;
+    /*border-color: rgba(0, 0, 0, 0.12);*/
+    /*border-width: 0 0 1px 0;*/
+    border:none;
+    color: rgba(0, 0, 0, 0.73);
+    cursor: default;
+    display: block;
+    font-size: 16px;
+    line-height: 38px;
+    padding: 2px 0 1px 16px;
+    position: relative;
+    text-align: left;
+    text-shadow: none;
+    width: 100%;
+    z-index: 1;
+    outline: none;
+    overflow: hidden;
+    cursor:pointer;
+}
+.md-select [type=button]:focus, .md-select [type=button]:hover {
+    background: #eee;
+}
+.md-select [type=button]:after {
+    content: '';
+    position:absolute;
+    right:15px;
+    top:calc(50% - 4px);
+    float: right;
+    border-width:6px;
+    border-style:solid;
+    border-color:#aaa transparent transparent transparent;
+    width:0;
+    height:0;
+    /*padding-right: 16px;*/
+}
+.md-select ul[role=listbox] {
+    background-color: white;
+    cursor: default;
+    list-style: none;
+    line-height: 26px;
+    overflow: hidden;
+    margin: 0;
+    max-height: 0;
+    position: absolute;
+    padding: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
+    transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;
+}
+.md-select ul[role=listbox] li {
+    height: 48px;
+    margin: 0;
+    padding: 10px 16px;
+    outline: none;
+    overflow: hidden;
+}
+.md-select ul[role=listbox] li:focus, .md-select ul[role=listbox] li:hover, .md-select ul[role=listbox] li.active {
+    background: rgba(0, 0, 0, 0.1);
+}
+.md-select.active ul {
+    max-height: 220px;
+    overflow: hidden;
+    padding: 8px 0 8px 0px;
+    z-index: 2;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+#car{
+    max-height:300px;
+    overflow:auto;
+}
+#car li{
+    padding:16px 0;
+}
+#car li img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+.mdl-switch.is-checked .mdl-switch__track {
+    background: rgba(68,138,255,.5)  !important;
+}
+.mdl-switch__thumb{
+    background:rgb(68,138,255) !important;
+
+}
+/*=================================================
+END OF COMMON CSS
+===================================================*/
+
+/*=================================================
+START OF LOGIN CSS
+===================================================*/
+
+.login-grid{
+    height:calc(100vh - 16px);
+    min-height: calc(100vh - 16px);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.login-grid>div{
+    background:#fff;
+    width:30%;
+    height:70%;
+    /*    padding:0 2%;*/
+    box-shadow:0 0 8px 0 rgba(100,100,100,0.5);
+}
+.login-panel {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.text-link{
+    color:#448aff;
+    line-height:2.5;
+    font-weight:400;
+    font-size:1.1rem;
+    font-size: 15px;
+    cursor:pointer;
+    background:none;
+    border:none;
+    outline:none;
+}
+
+.mdl-progress {
+    display: none;
+}
+
+/*=================================================
+END OF LOGIN CSS
+===================================================*/
+
+/*=================================================
+START OF TARIFF CSS
+===================================================*/
+
+.tariff-banner{
+    width:70%;
+    max-width:1024px;
+    margin:4em auto;
+
+}
+.tariff-banner .city-name{
+    position:relative;
+    font-weight:300;
+    font-size:1.75rem;
+    margin:0;
+}
+.tariff-banner .city-name:after{
+    content:'';
+    position:absolute;
+    left:110%;
+    top:50%;
+    width:1000px;
+    height:1px;
+    background:#888;
+}
+.mdl-data-table{
+    WIDTH:100%;
+}
+.mdl-data-table td,th{
+    text-align: left !important;
+}
+.more-filter{
+    position:fixed;
+    right:calc(15% + 44px);
+    bottom:10%;
+    z-index:999;
+    background:#448aff !important;
+    color:white;
+    box-shadow: 0 1px 4.5px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);
+}
+
+.dialog-wrapper{
+    position:fixed;
+    top:0px;
+    left:0;
+    display:flex;
+    align-items: center;
+    width:100%;
+    height:100vh;
+    background:rgba(10,10,10,0.2);
+    z-index:2000;
+}
+.route-modal .dialog-main{
+    padding:0;
+    width:50%;
+    height:60%;
+}
+.confirmation-dialog{
+    width:25%;
+}
+.route-modal .dialog-main .dialog-body{
+    padding:0;
+    margin:0;
+    width:100%;
+    height:100%;
+}
+.dialog-wrapper .dialog-main{
+    background:white;
+    height:70%;
+    margin-top:10%;
+    max-height:80%;
+    box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2);
+    overflow:hidden;
+}
+.dialog-header{
+    height:10%;
+}
+.dialog-body{
+    height:calc(90% - 24px);
+}
+.dialog-main ul{
+    margin:0 -16px;
+    height:100%;
+    overflow-y:auto;
+}
+.dialog-main ul li{
+    width:100%;
+}
+.dialog-main ul li:hover{
+    background:#eee;
+    cursor:pointer;
+
+}
+/*=================================================
+END OF TARIFF CSS
+===================================================*/
+
+
+/*=================================================
+START OF CARS CSS
+===================================================*/
+.cars-banner{
+    width:70%;
+    max-width:1024px;
+    margin:4em auto;
+}
+.car-type-row{
+    background:#eee;
+    margin-bottom:50px;
+    width:100%;
+    padding:0;
+    box-shadow:0 0 1px 0 rgba(10,10,10,0.4);
+}
+
+.card-component-row{
+    position:relative;
+    min-height:150px;
+    height:auto;
+    margin:0;
+    width:100%;
+    background:#fff;
+}
+.car-type-header{
+    margin:0;
+    width:100%;
+    padding:8px;
+}
+.car-type-row .view-all{
+    margin:auto;
+    font-size:1.1rem;
+    padding-top:35px;
+    padding-bottom:15px;
+}
+
+
+.demo-card-square.mdl-card {
+    width: calc(25% - 2.6px);
+    height: 300px;
+    margin:0;
+    z-index:0;
+    margin-bottom:-5px;
+    display:inline-block;
+    border-radius: 0;
+}
+.demo-card-square > .mdl-card__title {
+    color: #fff;
+    height:200px;
+}
+.car_bmw{background: url('../Assets/Images/bmw.jpg')  no-repeat #46B6AC;background-size:cover;}
+/*=================================================
+END OF CARS CSS
+===================================================*/
+
+
+/*=================================================
+START OF BOOKING CSS
+===================================================*/
+
+.booking-banner{
+    width:70%;
+    max-width:1024px;
+    margin:4em auto;
+}
+.booking-banner>div{
+    width:100%;
+}
+
+
+.stepper a{
+    padding:4px;
+    border-radius: 50%;
+    background:#ccc;
+    font-size:0;
+    margin:0 10px;
+}
+
+.stepper a.active{
+    background:#888;
+    padding:6px;
+}
+.stepper p{
+    font-size: 1.3rem;
+    display:none;
+}
+.stepper p.active{
+    display:block;
+}
+.booking-stepper{
+    width:100%;
+    position:relative;
+    min-height:300px;
+    background:#fff;
+    border-radius:2px;
+    box-shadow: 0 0 4px 0 rgba(10,10,10,0.4);
+}
+.booking-stepper>fieldset{
+
+    padding:20px;
+}
+.booking-stepper fieldset .stepper-heading{
+    font-weight:600;
+    color:#555;
+    margin:0;
+}
+.booking-stepper fieldset .stepper-subheading{
+    font-weight:400;
+    color:#777;
+    margin:0;
+}
+.booking-stepper .spinner-wrapper{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:none;
+    align-items: center;
+    justify-content: center;
+}
+.booking-stepper .spinner-wrapper.active{
+    display:flex;
+}
+.v_bar{
+    width:1px;
+    position:relative;
+    max-height:180px;
+    height:180px;
+    color: #444;
+    background:#ccc;
+}
+.v_bar>button{
+    position:absolute;
+    padding:15px;
+    border-radius: 50%;
+    background:#eee;
+    left:-27px;
+    top:35%;
+    box-shadow:0 0 2px 0 rgba(10,10,10,0.4);
+}
+.booking-stepper fieldset .date{
+    line-height: 24px;
+    font-size: 16px;
+
+    display: inline-block;
+    vertical-align: top;
+}
+.calendar-btn{
+    background:none;
+    border:none;
+    cursor:pointer;
+    outline:none;
+}
+#date{
+    background:#ddd;
+    padding:5px 20px;
+    border-radius:25px;
+    margin-top:-5px;
+    font-size:15px;
+}
+.filter-tag{
+    padding:20px 0;
+    background:#fcfcfc;
+    max-height:200px;
+    overflow-y:auto;
+}
+.filter-tag .mdl-checkbox{
+    margin:5px 0;
+}
+.filter-tag .mdl-checkbox .mdl-checkbox__label{
+    font-size:14px;
+    font-size:1rem;
+}
+.car-card{
+    width:24%;
+    margin-right:5px;
+    display:inline-block;
+}
+.card-component-wrapper{
+    margin:20px 0;
+    width:100%;
+    padding:10px 0;
+    max-height:500px;
+    overflow-y: auto;
+}
+.car-card .mdl-card__title{
+    padding: 0;
+}
+.car-card img{
+    width:100%;
+    height:100px;
+}
+.car-icon{
+    padding:20px;
+    background:#92a5a4;
+    border-radius:50%;
+    margin-top:20px;
+    color:white;
+}
+
+.pay-heading{
+    font-size:1.1rem;
+    color:#000;
+}
+.pay-data{
+    color:#4e5359;
+    padding:0 20px;
+}
+
+.payment-mode-section{
+    display:block;
+    width:100%;
+    height:100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-select{
+    min-width:80px !important;
+    width:80px;
+    margin:0;
+    margin-top:-8px;
+}
+.pay-data-bg{
+    color:#4e5359;
+    font-size:3rem;
+    font-weight:300;
+    /*padding:0 20px;*/
+}
+.pay-data-sm{
+    font-size:1.2rem;
+}
+.detail-more > span,.detail-less > span{
+    display:inline-block;
+    line-height:2.2;
+    vertical-align: text-bottom;
+}
+.detail-more > i,.detail-less > i{
+    color:#8b8b8b;
+}
+.detail-less{
+    display:none;
+}
+.detailed-bill-row{
+    padding:0 20%;
+    overflow:hidden;
+    height:0;
+    transition:height 0.25s ease;
+}
+.detailed-bill-row.expanded{
+    height:70%;
+}
+.filter-tag-section{
+    position:absolute;
+    right:0;
+    top:100%;
+    width:100%;
+    z-index:999;
+    height:auto;
+    padding:10px;
+    background:#fff;
+    box-shadow:0 0 8px 0 rgba(0,0,0,0.4);
+    transform: scale(0);
+    overflow:hidden;
+    -webkit-transform: scale(0);
+    transform-origin: top right;
+    transition:transform 0.25s ease;
+}
+.filter-tag-section.expanded {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    transform-origin: top right;
+    transition:transform 0.25s ease;
+}
+.filter-tag-container{
+    min-height:100px;
+    height:auto;
+
+}
+.filter-badge{
+    cursor:pointer;
+}
+.mdl-badge[data-badge]:after{
+    background:#448aff !important;
+}
+.filter-tags{
+    display:inline-block;
+    margin-right:5px;
+}
+.empty-msg i{
+    color:#ccc;
+}
+.filter-group{
+    position:relative;
+}
+/*=================================================
+END OF BOOKING CSS
+===================================================*/
+
+/*=================================================
+START OF SIGNUP CSS
+===================================================*/
+.signup-grid{
+    padding:0;
+}
+.signup-left-side{
+    background:url('../Assets/Images/signup-cover.jpg');
+    background-size: cover;
+    max-width:50%;
+    height:100vh;
+    margin:0;
+    display:flex;
+    position:relative;
+}
+.signup-left-side>div{
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+    background:rgba(118,184,82,0.9);
+}
+.signup-left-side>div>h3{
+    font-weight: 100;
+    color:white;
+    width:70%;
+    text-align: center;
+}
+.signup-content{
+    width:80%;
+    margin:0 auto;
+}
+/*=================================================
+END OF SIGNUP CSS
+===================================================*/
+
+/*=================================================
+START OF FORGET PASSWORD CSS
+===================================================*/
+
+.forget-icon-bg{
+    display:flex;
+    align-items: center;
+    height:400px;
+    justify-content: center;
+}
+
+.forget-icon-bg>h1{
+    width:150px;
+    height:150px;
+    background:#ddd;
+    font-size: 7.5rem;
+    text-align: center;
+    border-radius:50%;
+}
+.forget-icon-bg>h1>i{
+    font-size:5rem;
+    color:#999;
+}
+
+/*=================================================
+START OF ERROR PAGE CSS
+===================================================*/
+.error-page,.maintain-page{
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    align-items: center;
+
+}
+
+.error-page .error-logo{
+    width:100px;
+}
+
+.error-page h3{
+    color:#777;
+}
+
+.error-page p{
+    font-size:1.4rem;
+    color:#999;
+}
+
+.error-page h5{
+    font-weight:400;
+    color:#999;
+}
+
+.maintain-page h3{
+    color:white;
+}
+.maintain-page p{
+    font-size:1.4rem;
+    color:#ccc;
+}
+.maintain-logo{
+    width:200px;
+}
+.maintain-page button{
+    background:#555 !important;
+}
+/*=================================================
+END OF ERROR PAGE CSS
+===================================================*/

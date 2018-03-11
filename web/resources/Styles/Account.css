@@ -1,0 +1,232 @@
+hr{
+    width:100%;
+    border-top: 1px solid #e4e4e4;
+}
+.mdl-layout__drawer{
+    width:20% !important;
+    transform: translateX(-270px) ;
+}
+.private-header{
+    background: #3b9faf;
+    color:white;
+}
+
+.private-header nav a{
+    color:white !important;
+}
+
+.private-header .account-group{
+    position: relative;
+    padding: 5px 15px;
+    line-height: 0;
+    border-radius: 4px;
+
+}
+.private-header .account-group:hover{
+    background: #418c9c;
+}
+.private-header .account-group i{
+    padding-right: 10px;
+}
+
+.private-header .account-group .profile-dropdown{
+    position:absolute;
+    top:50px;
+    right:0;
+    width:300px;
+    min-height:100px;
+    height:auto;
+    padding:10px 10px;
+    background:#fff;
+    border-radius:3px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+/*    display: none;*/
+}
+.md-profile-menu{
+    position:absolute;
+    top:0;
+    right:0;
+    margin:0;
+    min-width:150px;
+    width:100%;
+    background:#fff;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: right top 0px;
+    transition: all .3s cubic-bezier(.55,0,.55,.2);
+    transition-duration: 250ms;
+}
+.md-profile-menu>*{
+    opacity: 1;
+    transition: all .3s cubic-bezier(.55,0,.55,.2);
+    transition-duration: .2s;
+    transition-delay: .1s;
+}
+
+.md-profile-menu.open {
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: right top 0px;
+    transition: all .4s cubic-bezier(.25,.8,.25,1);
+    transition-duration: .2s;
+}
+.md-profile-menu li span{
+    text-transform: none;
+}
+.md-profile-menu li:hover{
+    background:#e5e5e5;
+    cursor: pointer;
+}
+.profile-info{
+    width:50%;
+    margin:4em auto;
+    height:auto;
+    padding:10px;
+}
+.profile-info h5{
+    margin-bottom:0;
+}
+.profile-info strong{
+
+    font-weight: 500;
+}
+.profile-info img{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+}
+
+/*=================================================
+START OF DASHBOARD HOME CSS
+===================================================*/
+.dashboard-section{
+    width:90%;
+    margin:4em auto;
+    height:auto;
+    padding:10px;
+    display:block;
+}
+.dashboard-section .mdl-card{
+    margin:2em 0;
+    min-height:180px;
+}
+.dashboard-section .mdl-card__title h4{
+    font-weight: 300;
+    margin:0 !important;
+}
+.dashboard-section .mdl-card__actions h3{
+    margin:auto 15px !important;
+    color:#888;
+}
+
+.news-card{
+    width:100%;
+}
+/*=================================================
+END OF DASHBOARD HOME CSS
+===================================================*/
+
+/*=================================================
+START OF USER PROFILE CSS
+===================================================*/
+
+.width60{
+    width: 60px !important;
+}
+.marg-l20{
+    margin-left:20px;
+}
+.user-profile-wrapper{
+    padding:5% 0;
+}
+.profile-info{
+    width:50%;
+    margin:0 auto;
+    height:auto;
+    padding:20px ;
+    overflow:hidden;
+    border-radius: 2px;
+}
+.profile-info .prof-heading{
+    display:block;
+    position:relative;
+    margin-bottom:0;
+    font-size: 1.8rem;
+    color: #000;
+    font-weight: 400;
+}
+.prof-heading:after{
+    position:absolute;
+    left:100%;
+    width:100%;
+    height:1px;
+    top:50%;
+    background:#ccc;
+}
+.pro-subsection{
+    overflow:hidden;
+    height:0;
+    opacity:0;
+    transition:opacity 0.3s;
+}
+.pro-subsection.expanded{
+    height:auto;
+    opacity:1;
+}
+.pro-subsection div >label{
+    display:block;
+}
+
+
+.dropify-wrapper{
+    padding:0 !important;
+    border:none !important;
+}
+.file-icon>i{
+    font-size:inherit !important;
+}
+.dropify-message p{
+    font-size:16px;
+    width:70%;
+    margin:auto !important;
+}
+
+.prof-avatar{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+}
+
+
+/*=================================================
+START OF BOOKING STATUS CSS
+===================================================*/
+
+.booking-status{
+    width:50%;
+    margin:4rem auto;
+}
+.booking-status .booking-info{
+    width:100%;
+    height:auto;
+    padding:20px ;
+    overflow:hidden;
+    background:#fff;
+    box-shadow: 0 1px 4px 0 rgba(10,10,10,0.4);
+    border-radius: 2px;
+}
+.booking-status .status-heading{
+    font-weight:100;
+}
+.booking-status .booking-info label{
+    font-weight:100;
+}
+.booking-status .booking-info h6{
+    font-weight:400;
+    margin-top:10px;
+}
+
+/*=================================================
+END OF BOOKING STATUS CSS
+===================================================*/

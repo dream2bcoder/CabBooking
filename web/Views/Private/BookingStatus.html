@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="../../Styles/Style.css">
+  <link rel="stylesheet" href="../../Styles/Account.css">
+  <link rel="stylesheet" href="../../Styles/dropify.min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+</head>
+<body bgcolor="#f1f1f1">
+<div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--scroll private-header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Title</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link account-group" href=""><i class="material-icons">account_circle</i><span>User Firstname</span>
+
+          <div class="profile-dropdown">
+            <div class="top-cap"></div>
+            <div class="user-avatar-bg text-center">
+              <img src="../../Assets/Images/avater.jpg"/>
+            </div>
+            <h5>Full Name</h5>
+            <p>email id</p>
+            <div class="profile-dropdown-footer">
+              <button href="" class="text-link">profile</button>
+              <button href="" class="text-link">Logout</button>
+            </div>
+          </div>
+
+
+        </a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content booking-status"><!-- Your content goes here -->
+      <h4 class="status-heading">Booking status</h4>
+      <section class="mdl-grid booking-info">
+        <div class="mdl-cell mdl-cell--12-col">
+          <span>Trip</span>
+        </div>
+
+        <div class="mdl-cell mdl-cell--5-col">
+          <h4 class="">123 6th St. Melbourne, FL 32904</h4>
+        </div>
+        <div class="mdl-cell mdl-cell--2-col text-center">
+          <h4 class=""><i class="material-icons">arrow_forward</i></h4>
+        </div>
+
+        <div class="mdl-cell mdl-cell--5-col">
+          <h4 class="">123 6th St. Melbourne, FL 32904</h4>
+        </div>
+        <hr>
+        <div class="mdl-cell mdl-cell--8-col">
+          <label>Date</label>
+          <h6 class="">12 Aug 2017</h6>
+
+          <label>Class</label>
+          <h6 class="">Prime</h6>
+
+          <label>Cab</label>
+          <h6 class="">Maruti Suzuki Swift Dezire</h6>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col">
+          <label>Total fare</label>
+          <h2 class="">402.50</h2>
+          <p>Your payment is pending. <a href="#" class="text-link" onclick="openModalPopup('paymentModal');">Pay now</a></p>
+        </div>
+        <hr>
+        <div class="mdl-cell mdl-cell--12-col text-right">
+          <a href="#" class="text-link" onclick="openModalPopup('cancelBooking');">CANCEL BOOKING</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="dialog-wrapper payment-gateway" id="paymentModal">
+      <div class="mdl-grid dialog-main confirmation-dialog">
+        <div class="mdl-cell mdl-cell--12-col dialog-header">
+          <h3 class="modal-title">Payment gateway</h3>
+        </div>
+
+        <div class="mdl-cell mdl-cell--12-col dialog-body">
+          <div class="mdl-textfield mdl-js-textfield time-input mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="mm" onkeyup="getCreditCardType(this.value)">
+            <label class="mdl-textfield__label" for="mm">Card number</label>
+            <div class="b3id-card-icon-images-row b3-card-icon-images-row">
+              <div class="b3-card-icon-image-container"><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAUCAMAAADbT899AAABOFBMVEXd3d2wsLCtra3d3d0QNH7///8TN4Dg4OARNX83VZMpSYyzvtYVOIEhQ4gkRYlcdacYO4MiRIhJZJ2ms8/6+/w1VJLCy94eQIYrS43y9Pg+XJf29vZddqhiequ7xdvEzd/s7/UbPYRxhrOvu9R9kblGYptSbKLS2Od+krp6jrhHY5yxvdWImr/z9fnQ1+ZBXpltg7GdrMrm6vJNaJ+lss6uutPI0eLl6fHO1eUlRoqwvNRqga/o7POqt9F3i7Zfd6mVpcb4+fvP1uXV3OlCX5m1wNft8PUXOoI8WZZbdKcZPIOercuJm8CBlLuaqsn7/P3+/v6Elr2On8IaPISPoMPd4u3j6PBnfq2SosTZ3+tqgK9pf65mfa0sTI09WpY/XJguTY4zUpHFzuDByt4yUZGruNLu8Pb19/rublsSAAAABHRSTlPPHRzQ6ecnYAAAAN5JREFUeNq10kVuBEEQRNGa8Y+GYWYzMzMzMzPb97+BlyVZVns1sX7KRWSYkHEDYsKmoaqAVI1xFRi3PqBl4RdYTDqxrNRDYzsZZUuwIzXtMWovHNClXIKpXjqavda2kSWpE+4s6CahSSrqo3+AyqCkIYbxLVCasXEmjlNMz8SYnZPmiUa8sgXLrJBeXSMirW/A5tZ2PLdLwYJ9ihzqiJqkkwynZ5z7cS4suATnStfc3ObvH1Je4ZGnZ5+kBXrxatKr9/ZehI/PqJeXyk7pz6K+vuvwi2Bg/htMOHhyoR8v2CEWko8rOgAAAABJRU5ErkJggg=="
+                  alt="Visa" class="b3id-card-icon-image"></div>
+              <div class="b3-card-icon-image-container"><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAUCAYAAADskT9PAAACb0lEQVR4AcWWA4zkYACFZ/ds27atODkEh+Bs2w7Otm1zbdu2zZlZt50p3m3/Y5MO0tNLXjmd9/3+VVZWVt3S09Mjs7Ky8C8tZn78+LGrqvYiiqIo/GuJmSKESqQxqWoKug/2oI5eBn3pHvSuvgDL4buEomBwCY/BRl4En/4J0FXAHInZJgH0Lj7Qdh2HUlUXict6jQX79hx076aCftRFYublUPAZ1r8PwDx9T8LkXN6+HbDYAvpzbUionLno68oB+LxCaFoMkg1XW3YBP68usFwFrLEEc7eTLADztBcEbaIygOqdRw2WvrJHaxL+3eyxlgZrQe+5XhlA+dhZBgHo8U0lAPzuRgYBmDejlAFo+0wxCMBMaywBELY3MAzwtLfCGpg2zyAANaaZtAb2NjYIoHs/SRkAdfqGQYCKDu0kAPrTrQ0CsIGHlQGAoqHtO1UWQF1rdkYDEi5sqAfmgYHqfzUMYDTK5wE2IByaloNlIbRNOoJfUB+66x3kw5/1BZ/jongekMwHFbOWQW3R9Xs4ua5avBl8SiRY/wNgHveQtrv9HAgV6cpnQgMgZA1ggyKAqhpIxNEQ1LHg870hVOVAXgoAkpKSiDMyMpCcnIzMzEyEhYUR29rakmdqtRrh4eFITU0l18HBweLvxZWOXHt5eSkHeP36NW7evIn79+/j5cuXuHPnDi5evAhPT0/io0eP4uHDh3B0dMSrV6+IrayscOLECQQEBJDnTk5OygGKioqI8/PzERsbS0rs6+srruWkdAkJCcjOzoZGo0F0dDT5nbe3N9LS0sBxHIEoKSkxDiBuCv7rhkTcFv2vLZm4HfwCIId4CGkfoe4AAAAASUVORK5CYII="
+                  alt="Mastercard" class="b3id-card-icon-image"></div>
+              <div class="b3-card-icon-image-container"><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAUCAYAAADskT9PAAABmklEQVR4Ae2WM7QcQBSGt++TKumLmH1s20kT27Zt284z1rbNt97Hets/c29sO3POWN/FQFJSUtI2kUi4UqkUfmakPR89etRGIgruYrGInx1oT4KQEM3HQqu1iq+O7XfpP7o27f1JgP8A/wFWPQnjtDaN9WURbCiPYGdNHIsfBLGjOo5F9wPYK03gkKIOSx8Gsb06hvP6DI85oUmhzwnrtwOsLQ1jU0UUQ8/YsbUyxnHyVTeuW3KYc8eP1SVhjL3ohCLSwu00fuIVNwOOOOf8dgCS8IgyiSfuBpauKtCEPaKt1NvI5cei/ZqAoQ0Pyut4rDzcgqOqJIafc3xfHyA1k9rHXXJRzqagSOWFIi56K64qiXw/gNbrFKz+JQJiXWmEN5h/L4BZN7yYft3D7WSmbVUxTL3mYVOsfBL+vgCnhDMeU6fYLGuE7ffJErhqznHcXZvAischlPkaGfCWLY8lj0Lf1wSDT9s5dt6jx4BTNvQ8YESP/Ub0Pm6h9pex7wkr9488/xlO+P8i+g9An4Jf+iGhb9Gv+pLRd/App7Ze61KPSBIAAAAASUVORK5CYII="
+                  alt="Amex" class="b3id-card-icon-image"></div>
+              <div class="b3-card-icon-image-container"><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAUCAYAAADskT9PAAACU0lEQVR4Ae2WQ4NcWRhA+2/Etm2bbdu2jdi2rU04Gc/EZtu2VS/Fk667iG1dfFid8/x0CgoK9PLy8kpaNl94l7SwdXW0hUwm40sPLVPL1grwtYaW/Uvg+xBQq9XP9fJH8id1fW4GSqn50wgMGTAQZwdHIsMjePjwIRGhYSxdvARfL2/+//c/rly+zJyZs3B1cubetcvccZ5MhklrUl178uDsHqzMLQDYs2s3+/buZXD/AXi4uXH+3G9MHDsOO2sbkpOSXy8wf84cABbEJ7Bjxw4h4O7qyppVq6mrq2PWtOlUVVYCkLhtAbkWbajyaEdlcAfSlk7CxdGJzMxM9Ofr0tzczNiRo9i7ezfXr13Hyd6BhLh4Thw7/m4Cu3ftEgJyuZwjhw/j4+nFjKlTqa6uBiB5VwKF7u2oj+hI3cJOZG6YzKWLF9GdO49FCxYAMGXiJG7euMGD+w+EvO6cuWg0mjdfAkd7e2KiokhMTBQCbs4uONjZsX/fPnEZZs+YKc7KvWsXSV4wheL4DuSv6kvJvVMAAlRQUADw3CXw9/Vl88ZNYr/3TShJ0pO65Qie6+uLklFIDU/6xsZG3nXk3vzrKz2GshoU5+NIC+zwhQXkTSgvb0Ja1h9ZQifSAtp+IQGpDuWFdUgrBgqw2F9CQFOWguJMGNKSXk+gn19AVovq9kHkuw2fB35OAQFNPIX8qDPSou5PAO8i8IE/JBo0JYkoL24QRyot6PKu0Ce7OroDmTGDlNpfMt23/pIl3SLnn/1kHQ4jY7UuaaHdhf1HbAEvPx4c/xjfP9/8aMMZTwAAAABJRU5ErkJggg=="
+                  alt="Discover" class="b3id-card-icon-image"></div>
+            </div>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield width40">
+            <input class="mdl-textfield__input" type="text" id="hh" placeholder="MM">
+            <label class="mdl-textfield__label" for="hh"></label>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield width40 text-center">-</div>
+          <div class="mdl-textfield mdl-js-textfield width40">
+            <input class="mdl-textfield__input" type="text" id="hh" placeholder="YY">
+            <label class="mdl-textfield__label" for="hh"></label>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield width60">
+            <input class="mdl-textfield__input" type="text" id="cvc" placeholder="CVC">
+            <label class="mdl-textfield__label" for="cvc"></label>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="cvc">
+            <label class="mdl-textfield__label" for="cvc">Cardholder name</label>
+          </div>
+          <h5>Total amount - <span>250</span></h5>
+          <hr>
+          <p class="payment-term">By continuing, you agree to make payment through our payment gateway.In case your
+            transaction failed or interrupted then your amount will be refunded to your account within 2 - 3 days. </p>
+          <div class="mdl-cell mdl-cell--12-col text-right">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+              pay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--cancel booking modal confirmation-->
+
+    <div class="dialog-wrapper" id="cancelBooking">
+      <div class="mdl-grid dialog-main confirmation-dialog">
+        <div class="mdl-cell mdl-cell--12-col dialog-header">
+          <h3 class="modal-title">Cancel booking?</h3>
+        </div>
+
+        <div class="mdl-cell mdl-cell--12-col dialog-body">
+          <p>This will remove all your selected booking history from the record.</p>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col dialog-footer text-right">
+          <button class="text-link">NO</button>
+          <button class="text-link">YES,CANCEL BOOKING</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
+<script src="../../Scripts/basic-utility.js"></script>
+<script src="../../Scripts/modal-script.js"></script>
+
+</body>
+</html>

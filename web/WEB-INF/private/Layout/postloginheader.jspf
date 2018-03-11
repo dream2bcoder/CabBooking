@@ -1,0 +1,41 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<header class="mdl-layout__header mdl-layout__header--scroll private-header">
+    <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Title</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link account-group" href="#"><i class="material-icons">account_circle</i><span><%= user.getFirstName()%></span>
+
+                <ul class="demo-list-item mdl-list md-profile-menu">
+                    <li class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content" onclick="window.location.href='${pageContext.request.contextPath}/Views/Private/UserProfileInfo.jsp'">
+                            My account
+                        </span>
+                    </li>
+                    <li class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content" onclick="window.location.href='${pageContext.request.contextPath}/session/logout.do'">
+                            Sign out
+                        </span>
+                    </li>
+                </ul>
+            </a>
+        </nav>
+    </div>
+</header>
+<div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="${pageContext.request.contextPath}/Views/Private/Booking.jsp""><i class="material-icons">assignment</i> Book cab</a>
+        <a class="mdl-navigation__link" href=""><i class="material-icons">show_chart</i> Booking status</a>
+        <a class="mdl-navigation__link" href=""><i class="material-icons">assignment</i> Settings</a>
+        <a class="mdl-navigation__link" href=""><i class="material-icons">history</i> History</a>
+        <hr>
+        <a class="mdl-navigation__link" href=""><i class="material-icons">settings</i> Settings</a>
+        <a class="mdl-navigation__link" href=""><i class="material-icons">feedback</i> Send feedback</a>
+        <a class="mdl-navigation__link" href=""><i class="material-icons">help</i> Help</a>
+    </nav>
+</div>

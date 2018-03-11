@@ -1,0 +1,94 @@
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+<style>
+  .pac-item{
+    font-family:roboto;
+    padding:10px;
+    padding-bottom:0;
+    font-size: 13px;
+    border-top:none;
+  }
+  .pac-item >span:nth-last-of-type(1){
+    display:block;
+    margin-left:22px;
+    margin-top: -10px;
+    color: darkslategray;
+    border-bottom: 1px solid #eee;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .pac-item-query{
+    font-size:14px;
+    font-weight: 500;
+  }
+  .pac-matched{
+    color:gray;
+    font-weight: 500;
+  }
+  .pac-icon{
+    background:url(http://cdn.onlinewebfonts.com/svg/img_171095.svg) no-repeat;
+    background-position: 0 0;
+    margin-top: 10px;
+    opacity:0.5;
+  }
+</style>
+<div class="container">
+
+  <div class="row" data-example>
+    <div class="col-md-6">
+      <div class="form-group">
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input placepicker" type="text" id="sample3">
+            <label class="mdl-textfield__label" for="sample3"></label>
+          </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMBupiuW1wy6k2rX_WbbKgpsAahf7HFIQ&sensor=true&language=en&libraries=places"></script>
+<script src="https://www.jqueryscript.net/demo/jQuery-Location-Autocomplete-with-Google-Maps-Places-Library-Placepicker/src/js/jquery.placepicker.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+    // Advanced usage
+    $(".placepicker").each(function() {
+
+      // find map-element
+      var target = this;
+      var $collapse = $(this).parents('.form-group').next('.collapse');
+      var $map = $collapse.find('.placepicker-map');
+
+      // init placepicker
+      var placepicker = $(this).placepicker({
+        map: $map.get(0)
+      }).data('placepicker');
+
+      // reload map after collapse in
+      $collapse.on('show.bs.collapse', function () {
+
+        window.setTimeout(function() {
+          if (!$(target).prop('value')) {
+            placepicker.geoLocation();
+          }
+
+        }, 0);
+
+      });
+
+    });
+
+  });
+</script>

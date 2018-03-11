@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Booking</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="../Styles/Style.css">
+  <link rel="stylesheet" href="../Styles/calendar.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+  <style type="text/css">
+    html {
+      font: 500 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #333;
+      height: 100%;
+    }
+
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul,
+    ol,
+    li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #demo {
+      width: 400px;
+      margin: 30px auto;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    input {
+      margin: 10px 0;
+      height: 28px;
+      width: 200px;
+      padding: 0 6px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+    #two{
+      top:-40% !important;
+      left:calc(50% - 170px) !important;
+    }
+  </style>
+</head>
+<body bgcolor="#f3f3f3">
+
+<div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--waterfall">
+    <!-- Top row, always visible -->
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Google Material Design Components</span>
+      <div class="mdl-layout-spacer"></div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+        <label class="mdl-button mdl-js-button mdl-button--icon"
+               for="waterfall-exp">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="sample"
+                 id="waterfall-exp">
+        </div>
+      </div>
+    </div>
+    <!-- Bottom row, not visible on scroll -->
+    <div class="mdl-layout__header-row">
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="Home.html">home</a>
+        <a class="mdl-navigation__link" href="simple.html">services</a>
+        <a class="mdl-navigation__link" href="cars.html">cars</a>
+        <a class="mdl-navigation__link" href="Tariff.html">tariffs</a>
+        <a class="mdl-navigation__link" href="Faq.html">faq</a>
+        <button class="mdl-button mdl-js-button  mdl-js-ripple-effect  mdl-button--colored">
+          Know us
+        </button>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+
+      <section class="mdl-grid booking-banner">
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--12-col text-center">
+            <h2 class="section-component-heading ">Book your trip</h2>
+          </div>
+          <div class="mdl-cell mdl-cell--12-col text-center stepper">
+            <p class="step-name">Step one</p>
+            <a class="active"></a> <a></a> <a></a>
+          </div>
+        </div>
+
+        <div class="booking-stepper">
+          <div class="spinner-wrapper"><div class="mdl-spinner mdl-js-spinner is-active"></div></div>
+
+          <fieldset>
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--3-col ">
+                  <h6 class="stepper-heading">Location</h6>
+              </div>
+              <div class="mdl-cell mdl-cell--4-col pad_rt">
+                <h6 class="stepper-subheading">Select start location</h6>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text" id="pick-loc" placeholder="Pick location">
+                  <label class="mdl-textfield__label" for="pick-loc"></label>
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--1-col v_bar">
+                <button class="mdl-button mdl-js-button mdl-button--fab" onclick="swapLocation();">
+                  <i class="material-icons">swap_horiz</i>
+                </button>
+              </div>
+              <div class="mdl-cell mdl-cell--4-col pad_lt">
+                <h6 class="stepper-subheading">Select drop location</h6>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text" id="drop-loc" placeholder="Pick location">
+                  <label class="mdl-textfield__label" for="drop-loc"></label>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--3-col ">
+                <h6 class="stepper-heading">Date</h6>
+              </div>
+              <div class="mdl-cell mdl-cell--2-col">
+                <h6 class="stepper-subheading">Set journey date:</h6>
+              </div>
+              <div class="mdl-cell mdl-cell--2-col">
+                <span class="date">Not set</span>
+                <button class="calendar-btn">
+                  <i class="material-icons" id="dt">today</i>
+                </button>
+
+
+                <div id="two"></div>
+              </div>
+            </div>
+
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--3-col ">
+                <h6 class="stepper-heading">Time</h6>
+              </div>
+              <div class="mdl-cell mdl-cell--2-col">
+                <h6 class="stepper-subheading">Set pickup time:</h6>
+              </div>
+              <div class="mdl-cell mdl-cell--2-col">
+                <span class="date">Not set</span>
+                <button class="calendar-btn">
+                  <i class="material-icons">schedule</i>
+                </button>
+
+
+                <div id="two"></div>
+              </div>
+            </div>
+
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--12-col text-right">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" onclick="goToNext(this);">
+                  next
+                </button>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--3-col ">
+                <h6 class="stepper-heading">Choose car</h6>
+              </div>
+              <div class="mdl-cell mdl-cell--4-col pad_rt">
+                <h6 class="stepper-subheading">Select car type</h6>
+                <i class="material-icons car-icon">directions_car</i>
+                <div class="md-select">
+
+                  <label for="ul-id"><button type="button" class="ng-binding">Choose car type</button></label>
+                  <ul role="listbox" id="ul-id" class="md-whiteframe-z1" aria-activedescendant="state2_AK" name="ul-id">
+                    <li role="option" id="state2_AK" class="ng-binding ng-scope active" tabindex="-1" aria-selected="true">Mini</li>
+                    <li role="option" id="state2_AL" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Prime</li>
+                    <li role="option" id="state2_AR" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Luxury</li>
+                    <li role="option" id="state2_AS" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Royal</li>
+                  </ul>
+
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--1-col v_bar">
+
+              </div>
+              <div class="mdl-cell mdl-cell--4-col pad_lt">
+                <h6 class="stepper-subheading">Select your car</h6>
+                <ul class="demo-list-icon mdl-list" id="car">
+                  <!--<li class="mdl-list__item">-->
+                  <!--<span class="mdl-list__item-primary-content">-->
+                    <!--<img src="" class="mdl-list__item-icon" />-->
+                    <!--Bryan Cranston-->
+                  <!--</span>-->
+                  <!--</li>-->
+                </ul>
+              </div>
+
+
+            </div>
+
+
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--12-col text-right">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" onclick="goToNext(this);">
+                  next
+                </button>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--6-col ">
+                <h6 class="stepper-heading">Booking summary</h6>
+                <div>
+                  <h5>User Name</h5>
+                  <p> +91 - 8583866670</p>
+                  <br>
+                  <p class="pay-heading">Pickup location</p>
+                  <p>123 6th St. Melbourne, FL 32904</p>
+                  <p class="pay-heading">Drop location</p>
+                  <p>123 6th St. Melbourne, FL 32904</p>
+                  <hr>
+                  <p class="pay-heading">Distance <span class="pay-data">25 KM</span></p>
+                  <p class="pay-heading">Estimated time <span class="pay-data">1 hr 12 min</span></p>
+                  <div class="mdl-cell mdl-cell--6-col"><i class="material-icons">today</i> 12 Jul 2017</div>
+
+                  <hr>
+                  <p class="pay-heading">Base fare <span class="pay-data">25</span></p>
+                  <p class="pay-heading">Distance fare <span class="pay-data">352</span></p>
+                  <p class="pay-heading">Other charges <span class="pay-data">35</span></p>
+                  <hr>
+                  <h5>Subtotal <span class="pay-data">412</span></h5>
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--1-col v_bar">
+
+              </div>
+              <div class="mdl-cell mdl-cell--5-col pad_lt">
+                <h6 class="stepper-heading">Payment mode</h6>
+                <div class="payment-mode-section">
+                  <h1><i class="material-icons car-icon">directions_car</i></h1>
+                  <p>Please select your payment mode</p>
+
+                  <div>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                      <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+                      <span class="mdl-radio__label">Credit/Debit</span>
+                    </label>
+
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                      <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+                      <span class="mdl-radio__label">Net Banking</span>
+                    </label>
+
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                      <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+                      <span class="mdl-radio__label">Cash</span>
+                    </label>
+
+                  </div>
+                </div>
+
+
+
+
+              </div>
+
+            </div>
+
+
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--12-col text-right">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" onclick="goToNext(this);">
+                  next
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </section>
+
+      <footer class="mdl-mega-footer">
+        <div class="mdl-mega-footer__middle-section">
+
+          <div class="mdl-mega-footer__drop-down-section">
+            <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+            <h1 class="mdl-mega-footer__heading">Features</h1>
+            <ul class="mdl-mega-footer__link-list">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Partners</a></li>
+              <li><a href="#">Updates</a></li>
+            </ul>
+          </div>
+
+          <div class="mdl-mega-footer__drop-down-section">
+            <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+            <h1 class="mdl-mega-footer__heading">Details</h1>
+            <ul class="mdl-mega-footer__link-list">
+              <li><a href="#">Specs</a></li>
+              <li><a href="#">Tools</a></li>
+              <li><a href="#">Resources</a></li>
+            </ul>
+          </div>
+
+          <div class="mdl-mega-footer__drop-down-section">
+            <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+            <h1 class="mdl-mega-footer__heading">Technology</h1>
+            <ul class="mdl-mega-footer__link-list">
+              <li><a href="#">How it works</a></li>
+              <li><a href="#">Patterns</a></li>
+              <li><a href="#">Usage</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Contracts</a></li>
+            </ul>
+          </div>
+
+          <div class="mdl-mega-footer__drop-down-section">
+            <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+            <h1 class="mdl-mega-footer__heading">FAQ</h1>
+            <ul class="mdl-mega-footer__link-list">
+              <li><a href="#">Questions</a></li>
+              <li><a href="#">Answers</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="mdl-mega-footer__bottom-section">
+          <div class="mdl-logo">Title</div>
+          <ul class="mdl-mega-footer__link-list fl-left">
+            <li><a href="#">Help</a></li>
+            <li><a href="Terms.html">Privacy & Terms</a></li>
+          </ul>
+
+          <ul class="mdl-mega-footer__link-list fl-right">
+            <li><div class="mdl-logo">Follow us</div></li>
+            <li><i class="fa fa-facebook-square" aria-hidden="true"></i></li>
+            <li><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+            <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+            <li><i class="fa fa-youtube-play" aria-hidden="true"></i></li>
+          </ul>
+        </div>
+
+      </footer>
+    </div>
+  </main>
+
+</div>
+
+
+
+
+
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+<script src="../Scripts/basic-utility.js"></script>
+<script src="../Scripts/data.js"></script>
+<script src="../Scripts/calendar.js"></script>
+
+<script>
+  var now = new Date();
+  var year = now.getFullYear();
+  var month = now.getMonth() + 1;
+  var date = now.getDate();
+
+
+  var data = [{
+    date: year + '-' + month + '-' + (date - 1),
+    value: 'hello'
+  }, {
+    date: year + '-' + month + '-' + date,
+    value: '上班'
+  }, {
+    date: new Date(year, month - 1, date + 1),
+    value: '吃饭睡觉打豆豆'
+  }, {
+    date: '2016-10-31',
+    value: '2016-10-31'
+  }];
+
+
+
+  // picker
+  $('#two').calendar({
+    trigger: '#dt',
+    width: 340,
+    height: 340,
+    next: '<i class="material-icons">keyboard_arrow_right</i>',
+    prev: '<i class="material-icons">keyboard_arrow_left</i>',
+    offset: [0, 1],
+    zIndex: 999,
+    format: 'dd/mm/yyyy',
+    weekArray: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+    data: data,
+    onSelected: function (view, date, data) {
+      console.log('event: onSelected');
+      date = moment(date).format("DD MMM YYYY")
+      //alert('date:' + date);
+      $('.date').text(date);
+    },
+    onClose: function (view, date, data) {
+      console.log('event: onClose')
+      console.log('view:' + view)
+      console.log('date:' + date)
+      console.log('data:' + (data || '无'));
+    }
+  });
+  window.onload = function() {
+    populateList(car_list);
+  }
+
+  function populateList(cars){
+    var _ul = document.getElementById('car');
+    [].forEach.call(cars, function(_car) {
+      var _li = document.createElement('li');
+      _li.className = 'mdl-list__item';
+      var _span = document.createElement('span');
+      _span.className = 'mdl-list__item-primary-content ';
+      var _img = document.createElement('img');
+      _img.className = 'mdl-list__item-icon';
+      _img.src = _car.car_image;
+      _span.innerText = _car.car_name;
+
+      _span.prepend(_img)
+      _li.appendChild(_span);
+      _ul.appendChild(_li);
+    });
+  }
+
+
+</script>
+</body>
+</html>
